@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #c8a2c8, #e6ccff);
+    text-align: center;
+    overflow: hidden;
+    transition: 1s;
+}
+
+/* 🌙 Dim mode */
+.dimmed {
+    background: linear-gradient(135deg, #ffffff, #8c6d6d) !important;
+}
+
+/* ✨ Neon Glow Animation */
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #c084fc; }
+    50% { text-shadow: 0 0 20px #fff, 0 0 40px #a855f7; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #c084fc; }
+}
+
+/* 💜 Title */
+h1 {
+    margin-top: 40px;
+    font-size: 3em;
+    color: white;
+    animation: glowPulse 2s infinite;
+}
+
+/* 💬 Text */
+p {
+    font-size: 1.3em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #d8b4fe,
+        0 0 20px #c084fc;
+}
+
+/* 🎂 Cake */
+.cake {
+    position: relative;
+    margin: 60px auto;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/* 🍫 Chocolate layers */
+.layer {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: #3b1f1f;
+    border-radius: 10px;
+    bottom: 0;
+    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.4);
+}
+
+.layer.top {
+    width: 180px;
+    height: 50px;
+    left: 10px;
+    bottom: 60px;
+    background: #5a2e2e;
+}
+
+/* 🎀 Name */
+.cake-name {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff;
+}
+
+/* 🕯️ Candles */
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: white;
+    top: -40px;
+    border-radius: 3px;
+}
+
+.candle:nth-child(4) { left: 35px; }
+.candle:nth-child(5) { left: 85px; }
+.candle:nth-child(6) { left: 135px; }
+
+/* 🔥 Flame */
+.flame {
+    width: 10px;
+    height: 15px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    animation: flicker 0.3s infinite alternate;
+}
+
+.flame.off {
+    display: none;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.2); opacity: 1; }
+}
+
+/* 🎊 Confetti */
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 12px;
+    top: 0;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ✨ Sparkles */
+.sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkleAnim linear forwards;
+}
+
+@keyframes sparkleAnim {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1.5) translateY(-100px); opacity: 0; }
+}
+
+/* 💖 Hearts */
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* 🎆 Fireworks */
+.firework {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(15); opacity: 0; }
+}
+
+/* 🎁 Button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #7b1fa2;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* 💌 Hidden message */
+.hidden-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #ff80ab,
+        0 0 20px #ff4d88;
+}
